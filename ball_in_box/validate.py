@@ -14,7 +14,7 @@ def validate(circles, blockers):
            or (not (ypr <= 1 and ypr >=-1 )):
             return False
 
-    # Is circle good for blockers?
+    #判断圆与障碍物
     if blockers is not None and len(blockers) > 0:
         for circle in circles:
             for block in blockers:
@@ -26,7 +26,8 @@ def validate(circles, blockers):
                 if math.sqrt((x - bx)**2 + (y - by)**2) < r:
                     return False
 
-    # Is circle good for each other?
+    
+    #判断圆是否有重合部分
     lenth=len(circles)
     for m in range(lenth-1):
         for n in range(m+1,lenth):
