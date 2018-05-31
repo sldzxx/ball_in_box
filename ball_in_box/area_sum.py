@@ -2,7 +2,7 @@ import math
 import ball_in_box.ballinbox as bb
 import ball_in_box.validate as val
 
-def area_sum(circles):
+def area_sum(circles):                    #area函数
     area = 0.0
     for circle in circles:
         area =area+circle[2]**2 * math.pi
@@ -20,7 +20,7 @@ if __name__ == '__main__':
     
     circles = bb.ball_in_box(num_of_circle, blockers)
     
-    if num_of_circle == len(circles) and val.validate(circles, blockers):
+    if num_of_circle == len(circles) and val.validate(circles, blockers):               #判断条件
         area = area_sum(circles)
         print("Total area: {}".format(area))
     else:
