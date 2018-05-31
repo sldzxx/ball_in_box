@@ -27,9 +27,9 @@ def validate(circles, blockers):
                     return False
 
     # Is circle good for each other?
-    i=len(circles)
-    for m in range(i-1):
-        for n in range(m+1,i):
+    lenth=len(circles)
+    for m in range(lenth-1):
+        for n in range(m+1,lenth):
             x1 = circles[m][0]
             y1 = circles[m][1]
             r1 = circles[m][2]
