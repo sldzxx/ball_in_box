@@ -14,7 +14,7 @@ def ball_in_box(m=5, blockers=[(0.5, 0.5), (0.5, -0.5), (0.5, 0.3)]):
 
     circles = []
 
-    for circle_index in range(m):
+    for circle_index in range(m):              #核心算法
         tmp1=0
         circles.append((0,0,0))
         for i in range(100):
