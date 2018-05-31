@@ -37,7 +37,6 @@ def ball_in_box(m=5, blockers=[(0.5, 0.5), (0.5, -0.5), (0.5, 0.3)]):
                 mmaxC[0] = point[0]
                 mmaxC[1] = point[1]
                 mmaxC[2] = mminR
-
         circleList.append(mmaxC)   
         allPoints = list(filter(lambda p: getDistance(p,mmaxC) > mmaxC[2] , allPoints))       
 
