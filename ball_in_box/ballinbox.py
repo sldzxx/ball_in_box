@@ -15,7 +15,7 @@ def ball_in_box(m=5, blockers=[(0.5, 0.5), (0.5, -0.5), (0.5, 0.3)]):
     circles = []
 
     for circle_index in range(m):
-        tmp=0
+        tmp1=0
         circles.append((0,0,0))
         for i in range(100):
             for j in range(100):
@@ -26,9 +26,9 @@ def ball_in_box(m=5, blockers=[(0.5, 0.5), (0.5, -0.5), (0.5, 0.3)]):
                     circles[circle_index]=(x,y,r)
                     if not validate(circles,blockers):
                         break
-                if r-0.02>tmp :
-                    tmp=r-0.02
-                    tmp_circle=(x,y,tmp)
+                if r-0.02>tmp1 :
+                    tmp1=r-0.02
+                    tmp_circle=(x,y,tmp1)
         circles[circle_index]=tmp_circle
         circle_index += 1
     
