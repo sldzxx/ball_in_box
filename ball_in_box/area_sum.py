@@ -5,7 +5,7 @@ import ball_in_box.validate as val
 def area_sum(circles):
     area = 0.0
     for circle in circles:
-        area += circle[2]**2 * math.pi
+        area =area+circle[2]**2 * math.pi
 
     return area
 
@@ -24,7 +24,7 @@ if __name__ == '__main__':
         area = area_sum(circles)
         print("Total area: {}".format(area))
     else:
-        print("Error: no good circles.")
+        print("Error: no find good circles.")
 
 
 
