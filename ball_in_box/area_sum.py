@@ -20,7 +20,7 @@ if __name__ == '__main__':
     
     circles = bb.ball_in_box(num_of_circle, blockers)
     
-    if num_of_circle == len(circles) and val.validate(circles, blockers):               #判断条件
+    if num_of_circle == len(circles) and val.validate(circles, blockers):               
         area = area_sum(circles)
         print("Total area: {}".format(area))
     else:
