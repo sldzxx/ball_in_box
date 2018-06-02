@@ -12,21 +12,24 @@ def ball_in_box(m=5, blockers=[(0.5, 0.5), (0.5, -0.5), (0.5, 0.3)]):
     This returns a list of tuple, composed of x,y of the circle and r of the circle.
     """
 
-    # The following is an example implementation.
     circles = []
+
     for circle_index in range(m):
-
-        x = random.random()*2 - 1
-        y = random.random()*2 - 1
-        r = random.random()*0.1
-
-        circles.append((x, y, r))
-        while not validate(circles, blockers):
-            x = random.random()*2 - 1
-            y = random.random()*2 - 1
-            r = random.random()*0.1
-            circles[circle_index] = (x, y, r)
-
+        tmp=0
+        circles.append((0,0,0))
+        for i in range(200):
+            for j in range(200):
+                x=-1+0.01*i
+                y=-1+0.01*j
+                for k in range(200):
+                    r=0.01*k
+                    circles[circle_index]=(x,y,r)
+                    if not validate(circles,blockers):
+                        break
+                if r-0.01>tmp :
+                    tmp=r-0.01
+                    tmp_circle=(x,y,tmp)
+        circles[circle_index]=tmp_circle
         circle_index += 1
     
     return circles
